@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon API Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Pokémon API Explorer</h1>
+            <p class="subtitle">Search for any Pokémon by name or ID</p>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Enter Pokémon name or ID (e.g., pikachu or 25)"
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">
+                    <span class="btn-text">Search</span>
+                    <span class="btn-icon">🔍</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading Pokémon data...</p>
+        </div>
+
+        <!-- Error Message Container -->
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <!-- Results Container -->
+        <section id="resultsContainer" class="results-container hidden">
+            <!-- Pokemon card will be dynamically inserted here -->
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
